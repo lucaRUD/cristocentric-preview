@@ -1,0 +1,37 @@
+<div class="content">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="text-center">Name</th>
+          <th>Order Status</th>
+          <th>Order Date</th>
+          <th>Recipient Name</th>
+          <th>Recipient Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td class="text-center">{{ order.order.id }}</td>
+          <td>{{ order.order.status.stage }}</td>
+          <td>{{ order.order.created | date: 'medium' }}</td>
+          <td>{{ order.order.recipient.name }}</td>
+          <td>
+            {{ order.order.recipient.address.line1 }},
+            {{ order.order.recipient.address.townOrCity }},
+            {{ order.order.recipient.address.countryCode }}
+          </td>
+          <td class="td-actions text-center">
+            <button
+              type="button"
+              rel="tooltip"
+              class="btn btn-danger btn-link btn-icon btn-sm"
+              (click)="cancelOrder(order.prodigi_order_id)"
+            >
+              <i class="tim-icons icon-simple-remove"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

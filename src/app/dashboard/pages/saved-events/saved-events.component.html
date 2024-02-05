@@ -1,0 +1,32 @@
+<div class="content">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Place</th>
+          <th class="text-center">Date</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let event of savedEvents">
+          <td>{{ event.title }}</td>
+          <td>{{ event.general_location}}</td>
+          <td>{{ event.location }}</td>
+          <td class="text-center">{{ event.date}}</td>
+          <td class="td-actions text-center">
+            <button
+              type="button"
+              rel="tooltip"
+              class="btn btn-danger btn-link btn-icon btn-sm"
+              (click)="removeEvent(event.id)"
+            >
+              <i class="tim-icons icon-simple-remove"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

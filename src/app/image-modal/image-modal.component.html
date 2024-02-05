@@ -1,0 +1,6 @@
+<ng-container *ngIf="imageUrl">
+    <div class="image-modal-overlay" (click)="closeModal()"></div>
+    <div class="image-modal-dialog">
+      <img [src]="imageUrl" alt="Modal Image" class="modal-image">
+    </div>
+</ng-container>

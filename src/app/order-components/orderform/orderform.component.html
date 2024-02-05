@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="left">
+    <div class="header">
+    <h2 class="animation a1">Order</h2>
+    <h4 class="animation a3">Enter your information to complete your order.</h4>
+    </div>
+    <form [formGroup]="orderFormData">
+    <div class="form">
+   
+    <input class="form-field animation a3" type="text" formControlName="name"  required placeholder="Name">
+    <input class="form-field animation a3" type="text" formControlName="addressLine1"  required placeholder="Address Line 1">
+    <input class="form-field animation a3" type="text" formControlName="addressLine2"  placeholder="Address Line 2">
+    <input class="form-field animation a3" type="text" formControlName="zipCode"  required placeholder="Postal or Zip Code">
+    <input class="form-field animation a3" type="text" formControlName="countryCode"  required placeholder="Country Code">
+    <input class="form-field animation a3" type="text" formControlName="city"  required placeholder="Town or City">
+    <input class="form-field animation a3" type="text" formControlName="county"  placeholder = "State or County">
+   
+    <button class = "animation a5" (click)="onSubmit()" type = "submit" >Submit</button>
+    </div>
+    </form>
+    </div>
+    <div class = "right"></div>
+   </div>
+   

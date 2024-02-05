@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="left">
+    <div class="header">
+      <h2 class="animation a1">Welcome Back</h2>
+      <h4 class="animation a2">Log in to your account using email and password</h4>
+    </div>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+      <div class="form">
+        <input type="text" class="form-field animation a3" placeholder="Username" [(ngModel)]="username" name="username" #usernameField="ngModel" required>
+        <div *ngIf="usernameField.invalid && (usernameField.dirty || usernameField.touched)" >
+          <div *ngIf="usernameField.errors?.['required']">
+            Username is required.
+          </div>
+        </div>
+        <div class="password-container">
+          <input [type]="show ? 'text' : 'password'" class="form-field animation a4" placeholder="Password" [(ngModel)]="password" autocomplete="current-password" name="password" #passwordField="ngModel" required />
+          <div *ngIf="passwordField.invalid && (passwordField.dirty || passwordField.touched)" >
+            <div *ngIf="passwordField.errors?.['required']">
+              Password is required.
+            </div>
+          </div>
+          <div *ngIf="error" class="text-danger">{{ error }}</div>
+        </div>
+        <p class="animation a5"><a href="#">Forgot Password</a></p>
+        <button type="submit" class="animation a6">LOGIN</button>
+        <button type="submit" class="animation a6" routerLink="/register">SIGN UP</button>
+        <button type="submit" class="animation a6" id="google-button" (click)="loginWithGoogle()">SIGN IN WITH GOOGLE</button> 
+      </div>
+    </form>
+  </div>
+  <div class="right"></div>
+</div>

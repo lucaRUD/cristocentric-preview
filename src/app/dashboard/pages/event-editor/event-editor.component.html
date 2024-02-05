@@ -1,0 +1,25 @@
+<div class="content">
+    <div class="card" id="card">
+        <div *ngIf="event" class="edit-fields">
+        <span>Title</span>
+        <input class="form-control" style="width: 50%;" [(ngModel)]="event.title" name="title"/>
+            <div class="editor">
+            <span>Description</span>
+            <quill-editor #editor [(ngModel)]="event.description"></quill-editor>
+            </div>
+        <span> City and country</span>
+        <input class="form-control" style="width: 50%;" [(ngModel)]="event.general_location" name="location"/>
+        <span> Venue</span>
+        <input class="form-control" style="width: 50%;" [(ngModel)]="event.location" name="location"/>
+        <span>Date</span>
+        <input class="form-control" type="date" style="width: 50%;" [(ngModel)]="event.date" name="date"/>
+        <span>Main image</span>
+        <input type="file" style="width: 20%;"  (change)="onFileSelected($event)" />
+        <img [src]="event.image" class="main-image" alt="Main image" (click)="openImageModal(event.image)"/>   
+
+
+
+        <button class="btn btn-default animation-on-hover"  (click)="saveEvent()">Save</button>
+        </div>
+    </div>
+</div>

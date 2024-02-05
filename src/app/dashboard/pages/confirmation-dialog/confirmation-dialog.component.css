@@ -1,0 +1,17 @@
+.custom-title {
+    color: white;
+}
+
+.custom-content {
+    font-size: 18px;
+    color: white;
+
+}
+
+.custom-actions {
+    justify-content: space-around;
+}
+
+.modal {
+    background-color: rgb(48, 48, 48);
+}

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+mat-toolbar {
+    background-color: rgba(3, 1, 1, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.title {
+    margin-right: 20px;
+    font-family: 'Anzeigen Grotesk D';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    color: white;
+    line-height: 75%;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    /* identical to box height, or 172px */
+
+    letter-spacing: 0.135em;
+
+}
+
+.nav-links {
+    margin-left: auto;
+
+}
+
+.nav-links a {
+    font-family: 'Poppins', sans-serif;
+    margin-right: 20px;
+    font-size: 1.25rem;
+
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: orange;
+}
+.first_name {
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+
+.menu-button {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+        margin-left: auto;
+
+    }
+
+    .mat-menu-item a {
+        text-decoration: none;
+        color: white;
+
+
+    }
+}
+
+#mat-menu-small{
+    background-color: rgb(46, 46, 46);
+}
+
+#mat-menu-small a{
+color: rgb(255, 255, 255);
+}

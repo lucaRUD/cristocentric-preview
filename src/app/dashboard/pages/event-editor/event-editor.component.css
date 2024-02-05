@@ -1,0 +1,38 @@
+quill-editor {
+    margin-left: 30px;
+    margin-right: 30px;
+    color: black;
+}
+
+#card {
+    color: black;
+}
+
+.editor {
+    margin-top: 25px;
+}
+
+.edit-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-fields span {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    color: white;
+
+}
+
+.edit-fields input {
+    background-color: rgb(64, 64, 64);
+    margin-left: 30px;
+
+}
+
+.edit-fields img {
+    max-width: 40%;
+    margin: 30px;
+}

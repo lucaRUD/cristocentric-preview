@@ -1,0 +1,48 @@
+
+#event-card {
+    width: 90%;
+    padding: 1rem;
+    border-radius: 10px;
+    padding-bottom: 2rem;
+    background-color: #424242;
+    margin-bottom: 1rem;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.edit-event {
+    color: white;
+    appearance: none;
+}
+
+.event-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+#main-image {
+    aspect-ratio: 16/9;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: left;
+}
+
+.custom-drop{
+    position: absolute;
+    right: 0;
+    text-align: left;
+    align-items: end;
+  }
+
+.card{
+    background-color: #424242;
+}

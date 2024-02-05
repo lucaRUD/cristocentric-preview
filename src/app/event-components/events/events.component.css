@@ -1,0 +1,163 @@
+.container-header {
+    padding-top: 20.5rem;
+    padding-bottom: 20.5rem;
+    text-align: center;
+    color: #fff;
+    background-image: url(src/assets/unlucrubg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  .container-header h1 {
+    color: white;
+    font-size: 10vw;
+    font-family: 'Anzeigen Grotesk D';
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.135em;
+  }
+  
+  .scrolling-wrapper {
+    background: linear-gradient(rgb(25,24,28) ,black ,rgb(25,24,28));
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  .card-event {
+    display: inline-block;
+    width: 33%;
+    min-width: 300px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  .card-event:last-child {
+    margin-right: 0;
+  }
+  
+  body {
+    background: #111;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .cta-background {
+    background-size: cover;
+    background-position: center center;
+    bottom: 0;
+    filter: blur(50px);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .container-event {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
+  
+  .cta {
+    background: #333;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+    width: 400px;
+  }
+  
+  .cta:hover img {
+    top: -10%;
+    filter: brightness(70%);
+
+  }
+  
+  .cta:hover .text {
+    bottom: 0;
+    white-space: normal;
+  }
+  
+  .cta img {
+    bottom: 0;
+    filter: brightness(100%);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.5s ease-in-out;
+    width: 115%;
+    object-fit: cover;
+    height: 115%;
+    
+  }
+  
+  .cta .text {
+    bottom: -40%;
+    padding: 15px;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .cta .text h2 {
+    color: #fff;
+    display: inline-block;
+    font-weight: 300;
+    line-height: 350px;
+    margin-bottom: 5px;
+    position: relative;
+    transition: 300ms ease-in;
+  }
+
+  .cta:hover .text h2 {
+
+    line-height: 20px;
+    transition: 500ms linear;
+
+  }
+  
+  .cta .text p {
+    color: #fff;
+    font-weight: 300;
+  }
+  
+  @media (max-width: 768px) {
+    .card-event {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.196); /* Adjust the opacity and color as desired */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  

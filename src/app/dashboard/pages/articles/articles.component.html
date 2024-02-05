@@ -1,0 +1,47 @@
+<div class="content">
+    <div class="card">
+      <button (click)="createArticle()" class="btn btn-default animation-on-hover" style="width: 30%;">Add Article</button>
+    </div>
+  
+    <div class="row gx-4 gx-lg-5 align-items-center" id="article-card" *ngFor="let article of articles">
+      <div ngbDropdown class="d-inline-block" style="text-align:right">
+        <a class="edit-article" id="dropdownBasic1" ngbDropdownToggle><i class="tim-icons  icon-minimal-down"></i></a>
+        <div ngbDropdownMenu class="dropdown-menu">
+          <button ngbDropdownItem *ngIf="article.is_public" (click)="togglePublic(article.id)">Make private</button>
+          <button ngbDropdownItem *ngIf="!article.is_public" (click)="togglePublic(article.id)">Make public</button>
+          <button ngbDropdownItem (click)="archiveArticle(article.id)">Archive</button>
+          <button ngbDropdownItem (click)="confirmDelete(article.id)">Delete</button>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <img class="img-fluid rounded mb-4 mb-lg-0" [src]="article.main_image" id="main-image" alt="...">
+      </div>
+      <div class="col-lg-5">
+        <h1 class="font-weight-light">{{ article.title }}</h1>
+        <div [innerHTML]="article.content" class="article-content"></div>
+        <a class="btn btn-primary" (click)="viewArticle(article.id)">Edit article</a>
+        <div class="small text-muted">{{ article.date }}</div>
+      </div>
+    </div>
+  
+    <nav aria-label="Pagination">
+      <ul class="pagination justify-content-center mt-4">
+        <li class="page-item" [class.disabled]="currentPage === 1">
+          <a class="page-link" (click)="goToPage(currentPage - 1)" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item" *ngFor="let page of getPaginationArray()">
+          <a class="page-link" (click)="goToPage(page)" [class.active]="page === currentPage">{{ page }}</a>
+        </li>
+        <li class="page-item" [class.disabled]="currentPage === totalPages">
+          <a class="page-link" (click)="goToPage(currentPage + 1)" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  

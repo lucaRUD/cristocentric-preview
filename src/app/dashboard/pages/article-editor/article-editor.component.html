@@ -1,0 +1,18 @@
+<div class="content">
+  <div class="card">
+    <div *ngIf="article" class="edit-fields">
+  <span>Title</span>
+  <input class="form-control" style="width: 50%;" [(ngModel)]="article.title" name="title"/>
+  <div class="editor">
+    <span>Content</span>
+  <quill-editor #editor [(ngModel)]="article.content"></quill-editor>
+  </div>
+  <span>Author</span>
+  <input class="form-control"  style="width: 30%;" [(ngModel)]="article.author" name="author"/>
+  <span>Main image</span>
+  <input type="file" style="width: 20%;"  (change)="onFileSelected($event)" />
+  <img [src]="article.main_image" class="main-image" alt="Main image" (click)="openImageModal(article.main_image)"/>
+  <button class="btn btn-default animation-on-hover"  (click)="saveArticle()">Save</button>
+    </div>
+  </div>
+</div>

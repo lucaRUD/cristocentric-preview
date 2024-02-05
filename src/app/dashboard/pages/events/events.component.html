@@ -1,0 +1,49 @@
+<div class="content" id="content">
+    <div class="card">
+      <button (click)="createEvent()" class="btn btn-default animation-on-hover" style="width: 30%;">Add Event</button>
+    </div>
+  
+    <div class="row gx-4 gx-lg-5 align-items-center" id="event-card" *ngFor="let event of events">
+      <div ngbDropdown class="d-inline-block" style="text-align:right">
+        <a class="edit-event" id="dropdownBasic1" ngbDropdownToggle><i class="tim-icons  icon-minimal-down"></i></a>
+        <div ngbDropdownMenu class="custom-drop">
+          <button ngbDropdownItem *ngIf="event.is_public" (click)="togglePublic(event.id)">Make private</button>
+          <button ngbDropdownItem *ngIf="!event.is_public" (click)="togglePublic(event.id)">Make public</button>
+          <button ngbDropdownItem (click)="archiveEvent(event.id)">Archive</button>
+          <button ngbDropdownItem (click)="confirmDelete(event.id)">Delete</button>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <img class="img-fluid rounded mb-4 mb-lg-0" [src]="event.image" id="main-image" alt="...">
+      </div>
+      <div class="col-lg-5">
+        <h1 class="font-weight-light">{{ event.title }}</h1>
+        <h2 class="font-weight-light">{{event.general_location}}</h2>
+        <h3 class="font-weight-light">{{event.location}}</h3>
+        <div [innerHTML]="event.description" class="event-description"></div>
+        <a class="btn btn-primary" (click)="viewEvent(event.id)">Edit event</a>
+        <div class="small text-muted">{{ event.date }}</div>
+      </div>
+    </div>
+  
+    <nav aria-label="Pagination">
+      <ul class="pagination justify-content-center mt-4">
+        <li class="page-item" [class.disabled]="currentPage === 1">
+          <a class="page-link" (click)="goToPage(currentPage - 1)" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item" *ngFor="let page of getPaginationArray()">
+          <a class="page-link" (click)="goToPage(page)" [class.active]="page === currentPage">{{ page }}</a>
+        </li>
+        <li class="page-item" [class.disabled]="currentPage === totalPages">
+          <a class="page-link" (click)="goToPage(currentPage + 1)" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  

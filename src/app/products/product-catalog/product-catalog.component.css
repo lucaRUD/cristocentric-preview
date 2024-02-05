@@ -1,0 +1,160 @@
+body {
+    background: #252525;
+}
+
+a {
+    text-decoration: none;
+}
+.container-products {
+    background: linear-gradient(#7b003b, #0a0040);
+    border-top: 15px solid ;
+    border-bottom: 15px solid ;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}   
+
+.wrapper {
+    padding-top: 125px;
+    padding-bottom: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+}
+
+
+.services a {
+    flex-basis: calc(33.3333% - 40px);
+    margin: 20px;
+}
+
+.services {
+    width: 1100px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.single-img {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    width: 325px;
+    
+    background-color: orange;
+    height: 450px;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+        transform: translate(0, 0);
+        transition: .3s;
+    }
+    
+    .single-img:hover {
+        transform: translate(0, -9px);
+    }
+    
+    .img-one {
+        /* background-image: url(https://i.ibb.co/3WFv7cZ/prodigi-tshirt-uk-s-white.png); */
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+.img-two {
+    background-image: url(src\assets\2.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.img-three {
+    background-image: url(src\assets\1.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.img-text {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.904), rgba(255, 255, 255, 0));
+    padding: 0 10px 5px 10px;
+    width: 100%;
+    height: auto;
+        position: relative;
+        transform: translate(0, 200px);
+            line-height: 25px;
+            transition: 0.5s ease;
+            display: inline-block;
+            text-align: center;
+            color: #000000;
+}
+.img-text h4 {
+    line-height: 25px;
+    padding: 0;
+    margin: 16px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color:#000000;
+}
+.services button {
+    background: #252525;
+    color: #fff;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 50px;
+    line-height: 14px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.single-img:hover .img-text {
+    transform: translate(0, 0);
+}
+
+@media (max-width: 991px) {
+
+    .services {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+    
+
+        a {
+            margin-bottom: 35px;
+            margin-top: 35px;
+    
+        }
+}
+}
+                
+
+.container-header {
+    padding-top: 20.5rem;
+    padding-bottom: 20.5rem;
+    text-align: center;
+    color: #fff;
+        background:linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(src/assets/hoodie-woman.png);
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+}
+
+.container-header h1{
+    z-index: 3;
+
+}
+
+
+
+.container-header h1 {
+    color: white;
+    font-size: 10vw;
+    font-family: 'Anzeigen Grotesk D';
+    font-style: normal;
+    font-weight: 500;
+    /* line-height: 75%; */
+    letter-spacing: 0.135em;
+}
+

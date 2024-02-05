@@ -1,0 +1,75 @@
+@import url(https://db.onlinewebfonts.com/c/229edef2547a8290617bba7c23b16d0d?family=Anzeigen+Grotesk+D);
+
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', 'Roboto', "Helvetica Neue", sans-serif;
+    background-color: rgba(25, 24, 28, 1);
+
+
+}
+
+.mat-mdc-dialog-container {
+
+    --mdc-dialog-container-color: rgb(59, 59, 59);
+}
+
+.ql-snow * {
+    color: black;
+    background-color: white;
+}
+
+.ql-toolbar.ql-snow {
+    background-color: white;
+}
+
+.ql-editor {
+    height: 500px;
+    color: black;
+}
+
+.card {
+    color: black;
+}
+
+elemtent.style {
+    top: 0px;
+}
+
+.sidebar {
+    background-color: aqua;
+}
+
+header{
+    margin-bottom: 0;
+}
+
+.mdc-menu-surface {
+    background-color: var(--mdc-theme-surface, rgb(46, 46, 46));
+    color: var(--mdc-theme-on-surface, #fff);
+  }
+
+  a {
+    color: white;
+    font-weight: 300;
+
+    &:hover,
+    &:focus {
+        color: grey;
+    }
+}
+
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~bootstrap/dist/css/bootstrap.css";
+

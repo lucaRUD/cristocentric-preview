@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body {
+    background: #1f1f1f;
+}
+.date__box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    border: 4px solid;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-family: 'Poppins', sans-serif;
+}
+.date__box .date__day {
+    font-size: 22px;
+}
+.blog-card {
+    padding: 30px;
+    position: relative;
+    z-index: 10;
+    
+}
+.blog-card .date__box {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 300ms ease-in-out;
+}
+.blog-card .blog-card__background, .blog-card .card__background--layer {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.blog-card .blog-card__background {
+    padding: 15px;
+    background: rgb(24, 24, 24);
+}
+.blog-card .card__background--wrapper {
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
+    position: relative;
+    overflow: hidden;
+}
+.blog-card .card__background--main {
+    height: 100%;
+    position: relative;
+    transition: 300ms ease-in-out;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.blog-card .card__background--layer {
+    z-index: 0;
+    opacity: 0;
+    background: rgba(51, 51, 51, 0.9);
+    transition: 300ms ease-in-out;
+}
+.blog-card .blog-card__head {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blog-card .blog-card__info {
+    z-index: 10;
+    background: rgb(46, 46, 46);
+    padding: 20px 15px;
+}
+.blog-card .blog-card__info h3 {
+    transition: 300ms ease-in-out;
+}
+.blog-card:hover .date__box {
+    opacity: 1;
+    transform: scale(1);
+}
+.blog-card:hover .card__background--main {
+    transform: scale(1.2) rotate(5deg);
+}
+.blog-card:hover .card__background--layer {
+    opacity: 1;
+}
+.blog-card:hover .blog-card__info h5 {
+    color: #ffb535;
+}
+a.icon-link {
+    color: #f0f0f0;
+    transition: 200ms ease-in-out;
+}
+a.icon-link i {
+    color: #ffb535;
+}
+a.icon-link:hover {
+    color: #ffb535;
+    text-decoration: none;
+}
+.btn {
+    background: white;
+    color: #363738;
+    font-weight: bold;
+    outline: none;
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 0;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    padding: 0;
+    border: none;
+}
+.btn:focus {
+    box-shadow: none;
+}
+.btn:hover {
+    background: #ffb535;
+    color: #fff;
+}
+.btn.btn--with-icon {
+    padding-right: 20px;
+}
+.btn.btn--with-icon i {
+    padding: 0px 30px 0px 15px;
+    margin-right: 10px;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: bottom;
+    color: white;
+    background: #ffb535;
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+}
+.btn.btn--only-icon {
+    width: 50px;
+}
+
+.overlay-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .75);
+    width: 100vw;
+    height: 100vh;
+}
+
+.card-container{
+    width: 600px;
+    height: 70%;
+    border-radius: 10px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media (max-width: 768px) {
+    .card-container{
+      width: 90%;
+    }
+  }
+
+
+  .btn-overlay {
+    --border-color: linear-gradient(-45deg, #ffae00, #ff6600, #ff0000);
+    --border-width: .125em;
+    --curve-size: .5em;
+    --blur: 30px;
+    --bg: #080312;
+    --color: #ffffff;
+    color: var(--color);
+      /* use position: relative; so that BG is only for .btn-overlay */
+    position: relative;
+    isolation: isolate;
+    display: inline-grid;
+    place-content: center;
+    padding: .5em 1.5em;
+    font-size: 17px;
+    border: 0;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+    clip-path: polygon(
+              /* Top-left */
+              0% var(--curve-size),
+  
+              var(--curve-size) 0,
+              /* top-right */
+              100% 0,
+              100% calc(100% - var(--curve-size)),
+  
+              /* bottom-right 1 */
+              calc(100% - var(--curve-size)) 100%,
+              /* bottom-right 2 */
+              0 100%);
+    transition: color 250ms;
+  }
+  
+  .btn-overlay::after,
+  .btn-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  
+  .btn-overlay::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    animation: move-bg7234 5s ease infinite;
+    z-index: -2;
+  }
+  
+  @keyframes move-bg7234 {
+    0% {
+      background-position: 31% 0%
+    }
+  
+    50% {
+      background-position: 70% 100%
+    }
+  
+    100% {
+      background-position: 31% 0%
+    }
+  }
+  
+  .btn-overlay::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(
+              /* Top-left */
+              var(--border-width) 
+              calc(var(--curve-size) + var(--border-width) * .5),
+  
+              calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+  
+              /* top-right */
+              calc(100% - var(--border-width)) 
+              var(--border-width),
+  
+              calc(100% - var(--border-width)) 
+              calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+  
+              /* bottom-right 1 */
+              calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+              /* bottom-right 2 */
+              var(--border-width) calc(100% - var(--border-width)));
+    transition: clip-path 500ms;
+  }
+  
+  .btn-overlay:where(:hover, :focus)::after {
+    clip-path: polygon(
+                  /* Top-left */
+                  calc(100% - var(--border-width)) 
+  
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      
+                  calc(100% - var(--border-width))
+  
+                  var(--border-width),
+      
+                  /* top-right */
+                  calc(100% - var(--border-width))
+  
+                   var(--border-width),
+      
+                  calc(100% - var(--border-width)) 
+  
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+      
+                  /* bottom-right 1 */
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                  calc(100% - var(--border-width)),
+  
+                  /* bottom-right 2 */
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                  calc(100% - var(--border-width)));
+    transition: 200ms;
+  }
+  
+  .btn-overlay:where(:hover, :focus) {
+    color: #fff;
+  }
+
+.buttons a:hover{
+    color:black;
+}
+
+.description{
+    padding-top: 10px;
+}
