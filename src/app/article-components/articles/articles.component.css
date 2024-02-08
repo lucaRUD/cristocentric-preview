@@ -118,6 +118,7 @@
 app-donate{
     position: fixed;
     top: 50%;
-    right: 0;
+    display: none;
+    right: 10px;
     transform: translateY(-50%);
 }

@@ -30,16 +30,18 @@
   </span>
   <button class="menu-button" [matMenuTriggerFor]="menu" yPosition="above"> <mat-icon>menu</mat-icon></button>
 
-  <mat-menu #menu="matMenu" id="mat-menu-small">
+  <mat-menu #menu="matMenu" >
   <button mat-menu-item><a routerLink="/home" routerLinkActive="active">HOME</a></button>
   <button mat-menu-item><a routerLink="/store" routerLinkActive="active">STORE</a></button>
   <button mat-menu-item><a routerLink="/articles" routerLinkActive="active">ARTICLES</a></button>
   <button mat-menu-item><a routerLink="/events" routerLinkActive="active">EVENTS</a></button>
-  <button mat-menu-item><a routerLink="/dashboard/user" routerLinkActive="active" >PROFILE</a></button>
-  <button mat-menu-item><a routerLink="/cart" routerLinkActive="active">
+  <button mat-menu-item><a routerLink="/login" routerLinkActive="active">LOGIN</a></button>
+
+  <!-- <button mat-menu-item><a routerLink="/dashboard/user" routerLinkActive="active" >PROFILE</a></button> -->
+  <!-- <button mat-menu-item><a routerLink="/cart" routerLinkActive="active">
     <mat-icon>shopping_cart</mat-icon>
     <span class="cart-badge">{{ cartItemCount }}</span>
-    </a></button>
+    </a></button> -->
 
 
   </mat-menu>

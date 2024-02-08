@@ -37,6 +37,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+.header{
+    width: 100%;
+
+}
+
 
 .header>h2 {
     margin: 0;
@@ -168,4 +173,17 @@ body {
 #show-pass i{
     margin-top: 4px;
     margin-left: 5px;
+}
+
+
+
+@media (max-width:900px){
+    .form-field{
+        width: 100%;
+    }
+
+    .form{
+        max-width:100%
+    }
+
 }

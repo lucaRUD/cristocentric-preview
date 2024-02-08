@@ -195,3 +195,31 @@ body {
   margin-top: 5px;
   width: 40.5vh;
 }
+
+
+
+@media (max-width:900px){
+  .form-field{
+    max-width: 90%;
+  }
+  .form{
+    max-width: 90%;
+  }
+  .form-field-birth {
+    max-width: 90%;
+  }
+  .left{
+    width: 90vw;
+    
+  }
+
+  .header{
+    max-width: 90%;
+    font-size: 10px;
+  }
+
+  .form>button{
+    width: 90%;
+
+  }
+}
